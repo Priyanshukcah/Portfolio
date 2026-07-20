@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function(){try{var k="aanya-theme",t=localStorage.getItem(k);if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+  </script>
   <title>Projects | Priyanshu Baghel</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,14 +17,31 @@
     <!-- Brand name shown on the left side of the bar -->
     <a href="index.html" class="navbar-brand">Priyanshu Baghel</a>
 
-    <!-- Link group — sits on the right and holds all page links -->
-    <ul class="navbar-links">
-      <!-- "active" marks the current page so it gets a purple underline -->
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="navbar-end">
+      <!-- Link group — sits on the right and holds all page links -->
+      <ul class="navbar-links" id="navbar-menu">
+        <!-- "active" marks the current page so it gets a purple underline -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
+        <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+      </button>
+
+      <!-- Hamburger toggle — visible on mobile only -->
+      <button
+        class="navbar-toggle"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="navbar-menu"
+      >
+        <span class="navbar-toggle-icon" aria-hidden="true">☰</span>
+      </button>
+    </div>
 
   </nav>
 
@@ -31,18 +51,46 @@
     <p class="projects-subtitle">Six projects, three areas, one obsession: clarity.</p>
   </header>
 
+  <!-- Tag marquee -->
+  <div class="tag-marquee" aria-hidden="true">
+    <div class="tag-marquee-track">
+      <span class="tag-marquee-pill">Fintech</span>
+      <span class="tag-marquee-pill">Edtech</span>
+      <span class="tag-marquee-pill">Healthcare</span>
+      <span class="tag-marquee-pill">B2B</span>
+      <span class="tag-marquee-pill">A11y</span>
+      <span class="tag-marquee-pill">Design Systems</span>
+      <span class="tag-marquee-pill">Marketplace</span>
+      <span class="tag-marquee-pill">Data Viz</span>
+      <span class="tag-marquee-pill">Internal Tools</span>
+      <span class="tag-marquee-pill">UX Writing</span>
+      <span class="tag-marquee-pill">Fintech</span>
+      <span class="tag-marquee-pill">Edtech</span>
+      <span class="tag-marquee-pill">Healthcare</span>
+      <span class="tag-marquee-pill">B2B</span>
+      <span class="tag-marquee-pill">A11y</span>
+      <span class="tag-marquee-pill">Design Systems</span>
+      <span class="tag-marquee-pill">Marketplace</span>
+      <span class="tag-marquee-pill">Data Viz</span>
+      <span class="tag-marquee-pill">Internal Tools</span>
+      <span class="tag-marquee-pill">UX Writing</span>
+    </div>
+  </div>
+
   <!-- Project cards grid -->
   <section class="projects-grid">
 
     <!-- Project 1 -->
-    <article class="project-card">
-      <img
-        class="project-image"
-        src="https://placehold.co/640x360/4f46e5/ffffff?text=BRD+to+PRD"
-        alt="BRD to PRD and test cases generator"
-        width="640"
-        height="360"
-      >
+    <article class="project-card reveal" style="transition-delay: 0ms">
+      <div class="project-image-wrap">
+        <img
+          class="project-image"
+          src="https://placehold.co/640x360/4f46e5/ffffff?text=BRD+to+PRD"
+          alt="BRD to PRD and test cases generator"
+          width="640"
+          height="360"
+        >
+      </div>
       <div class="project-body">
         <h3 class="project-title">BRD to PRD and test cases generator</h3>
         <p class="project-description">A workflow that generates prd and test cases whenever a new business requirements come automatically.</p>
@@ -56,14 +104,16 @@
     </article>
 
     <!-- Project 2 -->
-    <article class="project-card">
-      <img
-        class="project-image"
-        src="https://placehold.co/640x360/0ea5e9/ffffff?text=Company+Chatbot"
-        alt="Company's chatbot"
-        width="640"
-        height="360"
-      >
+    <article class="project-card reveal" style="transition-delay: 50ms">
+      <div class="project-image-wrap">
+        <img
+          class="project-image"
+          src="https://placehold.co/640x360/0ea5e9/ffffff?text=Company+Chatbot"
+          alt="Company's chatbot"
+          width="640"
+          height="360"
+        >
+      </div>
       <div class="project-body">
         <h3 class="project-title">Company's chatbot</h3>
         <p class="project-description">A chatbot that answers based on company's policies and data fed to it.</p>
@@ -77,14 +127,16 @@
     </article>
 
     <!-- Project 3 -->
-    <article class="project-card">
-      <img
-        class="project-image"
-        src="https://placehold.co/640x360/10b981/ffffff?text=Sentiment+Analyser"
-        alt="Sentiment analyser"
-        width="640"
-        height="360"
-      >
+    <article class="project-card reveal" style="transition-delay: 100ms">
+      <div class="project-image-wrap">
+        <img
+          class="project-image"
+          src="https://placehold.co/640x360/10b981/ffffff?text=Sentiment+Analyser"
+          alt="Sentiment analyser"
+          width="640"
+          height="360"
+        >
+      </div>
       <div class="project-body">
         <h3 class="project-title">Sentiment analyser</h3>
         <p class="project-description">A workflow which takes customer feedback and sends urgent feedbacks to e mail.</p>
@@ -98,14 +150,16 @@
     </article>
 
     <!-- Project 4 -->
-    <article class="project-card">
-      <img
-        class="project-image"
-        src="https://placehold.co/640x360/f59e0b/ffffff?text=Receptionist+Bot"
-        alt="Company's receptionist"
-        width="640"
-        height="360"
-      >
+    <article class="project-card reveal" style="transition-delay: 150ms">
+      <div class="project-image-wrap">
+        <img
+          class="project-image"
+          src="https://placehold.co/640x360/f59e0b/ffffff?text=Receptionist+Bot"
+          alt="Company's receptionist"
+          width="640"
+          height="360"
+        >
+      </div>
       <div class="project-body">
         <h3 class="project-title">Company's receptionist</h3>
         <p class="project-description">A bot which can talk like a receptionist answering people on a call.</p>
@@ -119,14 +173,16 @@
     </article>
 
     <!-- Project 5 -->
-    <article class="project-card">
-      <img
-        class="project-image"
-        src="https://placehold.co/640x360/ef4444/ffffff?text=Coming+Soon"
-        alt="Coming soon"
-        width="640"
-        height="360"
-      >
+    <article class="project-card reveal" style="transition-delay: 200ms">
+      <div class="project-image-wrap">
+        <img
+          class="project-image"
+          src="https://placehold.co/640x360/ef4444/ffffff?text=Coming+Soon"
+          alt="Coming soon"
+          width="640"
+          height="360"
+        >
+      </div>
       <div class="project-body">
         <h3 class="project-title">Coming soon</h3>
         <p class="project-description">A new project is in the works — check back shortly.</p>
@@ -138,14 +194,16 @@
     </article>
 
     <!-- Project 6 -->
-    <article class="project-card">
-      <img
-        class="project-image"
-        src="https://placehold.co/640x360/8b5cf6/ffffff?text=Coming+Soon"
-        alt="Coming soon"
-        width="640"
-        height="360"
-      >
+    <article class="project-card reveal" style="transition-delay: 250ms">
+      <div class="project-image-wrap">
+        <img
+          class="project-image"
+          src="https://placehold.co/640x360/8b5cf6/ffffff?text=Coming+Soon"
+          alt="Coming soon"
+          width="640"
+          height="360"
+        >
+      </div>
       <div class="project-body">
         <h3 class="project-title">Coming soon</h3>
         <p class="project-description">A new project is in the works — check back shortly.</p>
@@ -176,16 +234,16 @@
       </div>
       <div class="footer-column footer-social">
         <h3 class="footer-heading">Social</h3>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/priyanshu-baghel-b178b1399/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/2025ucs0103/" target="_blank" rel="noopener noreferrer">📸 Instagram</a></li>
-          <li><a href="https://github.com/Priyanshukcah" target="_blank" rel="noopener noreferrer">💻 Github</a></li>
-          <li><a href="mailto:priyanshubaghel164@gmail.com">✉️ Email</a></li>
-        </ul>
+        <div class="social-icon-row">
+          <a href="https://www.linkedin.com/in/priyanshu-baghel-b178b1399/" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
+          <a href="https://www.instagram.com/2025ucs0103/" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
+          <a href="https://github.com/Priyanshukcah" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="Github">💻</a>
+          <a href="mailto:priyanshubaghel164@gmail.com" class="social-icon-btn" aria-label="Email">✉️</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Priyanshu Baghel — Built with curiosity and Cursor.</p>
+      <p>© 2026 Priyanshu Baghel — Built with curiosity <span class="footer-heart" aria-hidden="true">♥</span> and Cursor.</p>
     </div>
   </footer>
 
