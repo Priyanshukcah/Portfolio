@@ -1,0 +1,17 @@
+# Project Context & Rules
+
+## Tech Stack & Architecture
+- This is a website built using: [ HTML, CSS, JavaScript]
+- Main entry point: [ index.html ]
+- Purpose: [ A portfolio website ]
+
+## Styling & Design Constraints
+- UI Framework/Method: [ custom styles.css file]
+- Primary Color Scheme: [a attractive purple color with white background analyze these colors and font from @styles.css file]
+- Responsive Layout: The layout is already complete and responsive. Do not break mobile/desktop viewports.
+
+## Critical Safety & "Do Not Touch" Rules
+- The content and core layout of this website are COMPLETE. 
+- Goal: We are only REDEFINING and polishing (tweaking fonts, spacing, alignment, subtle animations, color adjustments).
+- CRITICAL: Do not rewrite entire files from scratch. Do not change existing class names or structural IDs unless explicitly asked, as this will break the existing layout.
+- When modifying a file, preserve all existing functionality, scripts, and content text exactly as they are.
